@@ -1,16 +1,16 @@
 #let's put all students into an array
 students = [
-  {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: ["climbing", "cooking"], age: 51},
-  {name: "Darth Vader", cohort: :november, hobbies: ["swimming", "cooking"], age: 35},
-  {name: "Nurse Ratched", cohort: :november, hobbies: ["running", "cooking"], age: 28},
-  {name: "Michael Corleone", cohort: :november, hobbies: ["climbing", "swimming"], age: 22},
-  {name: "Alex DeLarge", cohort: :november, hobbies: ["writing", "reading"], age: 64},
-  {name: "The Wicked Witch of the West", cohort: :november, hobbies: ["drawing", "cooking"], age: 81},
-  {name: "Terminator", cohort: :november, hobbies: ["climbing", "reading"], age: 44},
-  {name: "Freddy Krueger", cohort: :november, hobbies: ["programming", "cooking"], age: 12},
-  {name: "The Joker", cohort: :november, hobbies: ["climbing", "swimming"], age: 40},
-  {name: "Joffrey Baratheon", cohort: :november, hobbies: ["writing", "cooking"], age: 21},
-  {name: "Norman Bates", cohort: :november, hobbies: ["climbing", "running"], age: 78}
+  {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: ["climbing", "cooking"], age: 51, height: 5.11},
+  {name: "Darth Vader", cohort: :november, hobbies: ["swimming", "cooking"], age: 35, height: 5.7},
+  {name: "Nurse Ratched", cohort: :november, hobbies: ["running", "cooking"], age: 28, height: 5.3},
+  {name: "Michael Corleone", cohort: :november, hobbies: ["climbing", "swimming"], age: 22, height: 6.5},
+  {name: "Alex DeLarge", cohort: :november, hobbies: ["writing", "reading"], age: 64, height: 5.5},
+  {name: "The Wicked Witch of the West", cohort: :november, hobbies: ["drawing", "cooking"], age: 81, height: 5.11},
+  {name: "Terminator", cohort: :november, hobbies: ["climbing", "reading"], age: 44, height: 6.1},
+  {name: "Freddy Krueger", cohort: :november, hobbies: ["programming", "cooking"], age: 12, height: 4.11},
+  {name: "The Joker", cohort: :november, hobbies: ["climbing", "swimming"], age: 40, height: 5.8},
+  {name: "Joffrey Baratheon", cohort: :november, hobbies: ["writing", "cooking"], age: 21, height: 5.11},
+  {name: "Norman Bates", cohort: :november, hobbies: ["climbing", "running"], age: 78, height: 5.2}
 ]
 def print_header
   puts "The students of Villains Academy"
