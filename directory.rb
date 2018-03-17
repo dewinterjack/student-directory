@@ -1,16 +1,16 @@
 #let's put all students into an array
 students = [
-  {name: "Dr. Hannibal Lecter", cohort: :november},
-  {name: "Darth Vader", cohort: :november},
-  {name: "Nurse Ratched", cohort: :november},
-  {name: "Michael Corleone", cohort: :november},
-  {name: "Alex DeLarge", cohort: :november},
-  {name: "The Wicked Witch of the West", cohort: :november},
-  {name: "Terminator", cohort: :november},
-  {name: "Freddy Krueger", cohort: :november},
-  {name: "The Joker", cohort: :november},
-  {name: "Joffrey Baratheon", cohort: :november},
-  {name: "Norman Bates", cohort: :november}
+  {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: ["climbing", "cooking"], age: 51},
+  {name: "Darth Vader", cohort: :november, hobbies: ["swimming", "cooking"], age: 35},
+  {name: "Nurse Ratched", cohort: :november, hobbies: ["running", "cooking"], age: 28},
+  {name: "Michael Corleone", cohort: :november, hobbies: ["climbing", "swimming"], age: 22},
+  {name: "Alex DeLarge", cohort: :november, hobbies: ["writing", "reading"], age: 64},
+  {name: "The Wicked Witch of the West", cohort: :november, hobbies: ["drawing", "cooking"], age: 81},
+  {name: "Terminator", cohort: :november, hobbies: ["climbing", "reading"], age: 44},
+  {name: "Freddy Krueger", cohort: :november, hobbies: ["programming", "cooking"], age: 12},
+  {name: "The Joker", cohort: :november, hobbies: ["climbing", "swimming"], age: 40},
+  {name: "Joffrey Baratheon", cohort: :november, hobbies: ["writing", "cooking"], age: 21},
+  {name: "Norman Bates", cohort: :november, hobbies: ["climbing", "running"], age: 78}
 ]
 def print_header
   puts "The students of Villains Academy"
