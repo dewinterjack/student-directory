@@ -54,9 +54,20 @@ def starts_with(students, letter)
   end
   return new_list
 end
+
+def shortNames(students, howShort)
+  new_list = []
+  students.each_with_index do |student, index|
+    if student[:name].length < howShort then
+      new_list << student
+    end
+  end
+  return new_list
+end
 #nothing happens until we call the methods
 students = input_students
-test_students = starts_with(students, "A")
+#test_students = starts_with(students, "A")
+#test_students = shortNames(students, 12)
 print_header
 print(students)
 print_footer(students)
