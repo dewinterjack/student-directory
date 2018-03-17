@@ -12,6 +12,7 @@ students = [
   {name: "Joffrey Baratheon", cohort: :november, hobbies: ["writing", "cooking"], age: 21, height: 5.11},
   {name: "Norman Bates", cohort: :november, hobbies: ["climbing", "running"], age: 78, height: 5.2}
 ]
+
 def print_header
   puts "The students of Villains Academy".center(50)
   puts "-------------".center(50)
@@ -19,25 +20,39 @@ end
 def print(students)
   i = 0
   while i < students.length do
-    puts "#{i + 1}. #{students[i][:name]} (#{students[i][:cohort]} cohort)".center(50)
+    puts "#{i + 1}. #{students[i][:name]} (#{students[i][:cohort].capitalize} cohort)".center(50)
     i += 1
   end
 end
 
 def input_students
-  puts "Please enter the names of the students".center(50)
+  cohorts = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  puts "Please enter the names & cohorts of the students".center(50)
   puts "To finish, just hit return twice".center(50)
   # create an empty array
   students = []
-  # get the first name
-  name = gets.chomp
   # while the name is not empty, repeat this code
+  name = " "
   while !name.empty? do
-    # add the student hash to the array
-    students << {name: name, cohort: :november}
-    puts "Now we have #{students.count} students".center(50)
-    # get another name from the user
+    puts "Name:".center(50)
     name = gets.chomp
+    puts "Cohort:".center(50)
+    cohort = gets.chomp.to_sym
+    cohorts.each do |c|
+      if cohort.to_s.downcase == c.downcase then
+        puts "Are these details correct? y/n"
+        puts "Name: #{name}, Cohort: #{cohort}."
+        input = gets.chomp
+        if input == "y" then
+          # add the student hash to the array
+          students << {name: name, cohort: cohort}
+          puts "Now we have #{students.count} students".center(50)
+          break
+        else
+          next
+        end
+      end
+    end
   end
   # return the array of students
   students
