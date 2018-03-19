@@ -60,7 +60,11 @@ def input_students
 end
 
 def print_footer(names)
-  puts "\nOverall, we have #{names.count} great students".center(50)
+  s = ""
+  if names.count > 1 then
+    s = "s"
+  end
+  puts "\nOverall, we have #{names.count} great student#{s}".center(50)
 end
 
 def starts_with(students, letter)
