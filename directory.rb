@@ -17,10 +17,11 @@ def print_header
   puts "The students of Villains Academy".center(50)
   puts "-------------".center(50)
 end
+
 def print(students)
   i = 0
   while i < students.length do
-    puts "#{i + 1}. #{students[i][:name]} (#{students[i][:cohort].capitalize} cohort)".center(50)
+    puts "#{i + 1}. #{students[i][:name].capitalize} (#{students[i][:cohort].capitalize} cohort)".center(50)
     i += 1
   end
 end
@@ -59,7 +60,7 @@ def input_students
 end
 
 def print_footer(names)
-  puts "Overall, we have #{names.count} great students".center(50)
+  puts "\nOverall, we have #{names.count} great students".center(50)
 end
 
 def starts_with(students, letter)
@@ -72,7 +73,7 @@ def starts_with(students, letter)
   return new_list
 end
 
-def shortNames(students, howShort)
+def short_names(students, howShort)
   new_list = []
   students.each_with_index do |student, index|
     if student[:name].length < howShort then
@@ -81,10 +82,30 @@ def shortNames(students, howShort)
   end
   return new_list
 end
+
+def print_by_cohort(students)
+  cohorts = []
+  students.each do |student|
+    cohorts.push(student[:cohort].capitalize)
+  end
+  cohorts = cohorts.uniq # Removing duplicates
+  cohorts.each do |cohort|
+    puts " " # new line for styling
+    puts "#{cohort.capitalize} Cohort:\n".center(50)
+    index = 1
+    students.each do |student|
+      if student[:cohort].capitalize == cohort then
+        puts "#{index}. #{student[:name].capitalize}".center(50)
+        index += 1
+      end
+    end
+  end
+end
 #nothing happens until we call the methods
 students = input_students
 #test_students = starts_with(students, "A")
-#test_students = shortNames(students, 12)
+#test_students = short_names(students, 12)
 print_header
-print(students)
+#print(students)
+print_by_cohort(students)
 print_footer(students)
