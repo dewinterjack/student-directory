@@ -47,7 +47,7 @@ def input_students
         if input == "y" then
           # add the student hash to the array
           students << {name: name, cohort: cohort}
-          puts "Now we have #{students.count} students".center(50)
+          puts "Now we have #{students.count} students".tap{|now| puts students.count == 1 ? now.chop.center(50) : now.center(50)} 
           break
         else
           next
@@ -60,11 +60,7 @@ def input_students
 end
 
 def print_footer(names)
-  s = ""
-  if names.count > 1 then
-    s = "s"
-  end
-  puts "\nOverall, we have #{names.count} great student#{s}".center(50)
+  "\nOverall, we have #{names.count} great students".tap{|foot| puts names.count == 1 ? foot.chop.center(50) : foot.center(50)}
 end
 
 def starts_with(students, letter)
@@ -106,6 +102,7 @@ def print_by_cohort(students)
   end
 end
 #nothing happens until we call the methods
+puts "hi".chop
 students = input_students
 #test_students = starts_with(students, "A")
 #test_students = short_names(students, 12)
